@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="panier.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet"> 
+    <meta name="keywords" content="camera entreprise">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="shortcut icon" type="image/png" href="favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="Documents/Premierprojet/fontawesome-free-5.15.3-web.css" rel="stylesheet">
+
+    <title>Vente de caméras</title>
+
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <div id = "logo">
+                <span id ="logo_part1">
+                    Ori
+                </span>
+                <span id = "logo_part2">
+                    Photographie
+                </span>
+            </div>
+        </a>
+        <span id="basket">
+            <a href="panier.html">
+                <span id="basket_total_quantity"></span>
+                <i class="fas fa-shopping-cart"></i>
+                <span id="basket_text">Mon panier</span>
+            </a>
+        </span>
+        
+    </header>
+    <section id="cart_section">
+        <span id="basket_paragraph"></span>
+        <div id="products_basket">
+        
+        <div id="basket_container">
+            <template id="template_empty_card">
+                <div id="empty_basket">
+                    <span id="empty_basket_text">Le Panier est vide</span>
+               </div>
+            </template>
+            <template id="template_full_card">
+                <div id="recapitulatif_order">
+                    <div class="product_card">
+                        <img id="picture_product" src="" alt="photo produit">
+                        <div id="name_reference">
+                            <span id="name"></span>
+                            <span id="reference"></span>
+                        </div>
+                        <input id="number" type="number" value="" min="" max="">
+                        <div id="price_trash">
+                            <span id = "price"></span>
+                            <span id="total_price_product"></span>
+                            <span id="trash_logo">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            
+        </div>
+        <div id="total">
+            <div id="total_cart">
+                <span>Total du panier :</span>
+                <span id="total_price"></span>
+            </div>
+            <div id="remove_cart">
+                <span>Vider le panier</span>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="form_section">
+        <div class="line_bellow"><hr></div>
+        <template id="form_template">
+            <div id="form_container">
+                <span id="form_title">Formulaire d'inscription pour valider la commande</span>
+                <form action="" method="post">
+                    <span><p><label for="firstname">Prénom</label> : </p><input id="firstname" type="text" required><span class="error error_first_name"></span></span>
+                    <span><p><label for="lastname">Nom</label> : </p><input id="lastname" type="text" required><span class="error error_last_name"></span></span>
+                    <span><p><label for="adress">Adresse</label> : </p><input id="adress" type="text" required><span class="error error_adress"></span></span>
+                    <span><p><label for="city">Ville</label> : </p><input id="city" type="text" required><span class="error error_city"></span></span>
+                    <span><p><label for="email">Email</label> : </p><input id="email" type="email" required><span class="error error_email"></span></span>
+                </form>
+                <div id="send_container">
+                    <span id="send">Envoyer</span>
+                </div>
+            </div>
+        </template>
+    </section>
+    <footer>
+        <span>Nous contacter</span>
+        <span>Service client</span>
+        <span>À propos</span>
+    </footer>
+    <script src="panier.js"></script>
+</body>
+</html>
