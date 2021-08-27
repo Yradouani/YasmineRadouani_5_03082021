@@ -72,12 +72,17 @@ fetch(`http://localhost:3000/api/cameras/${id}`)
     
     //Fonction pour ouvrir une fenêtre après ajout au panier
     function pushCart (){
-        if(window.confirm(`Votre produit : ${data.name} a bien été ajouté au panier ! Souhaitez-vous accèder au panier ?`)){
+        var confirmation_container = document.querySelector('#template_confirmation');
+        var newNodeConfirmation = document.importNode(confirmation_container.content, true);
+        document.querySelector('#section').appendChild(newNodeConfirmation);
+        //Redirection vers le panier
+        document.querySelector('#yes').addEventListener('click', () => {
             window.location.href = 'panier.html';
-        }
-        else{
+        })
+        //Redirection vers la page d'accueil
+        document.querySelector('#no').addEventListener('click', () => {
             window.location.href = 'index.html';
-        }
+        })
     }
 
     //Ajout des produits au panier (dans le localStorage)

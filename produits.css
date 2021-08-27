@@ -124,6 +124,46 @@ header a{
 .btn:hover{
     background-color: rgb(78, 78, 78);
 }
+#confirmation{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    background-color: #C8AD7F;
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgb(163, 154, 140);
+}
+#confirmation span{
+    font-size: 19px;
+}
+#yes_or_no{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+#yes, #no{
+    background-color: rgb(226, 226, 221);
+    border-radius: 35px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#yes:hover, #no:hover{
+    background-color: rgb(211, 211, 209);
+}
+.text_confirmation{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 footer{
     background-color: rgb(46, 45, 45);
     height: 100px;
@@ -166,5 +206,10 @@ footer span:hover{
         text-align: center;
         align-items: center;
         width: 90%;
+    }
+}
+@media (max-width: 460px){
+    #confirmation{
+        width: 270px;
     }
 }

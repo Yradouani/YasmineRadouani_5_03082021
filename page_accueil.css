@@ -3,20 +3,6 @@ body{
     margin: 0 auto;
     font-family: 'Roboto', 'sans-serif';
 }
-#banner{
-    border: 1px inset #000;
-    background: rgb(255, 255, 255);
-    color: #ddd;
-    width: 100%;
-    height: 40px;
-    overflow: hidden;
-}
-
-#banner p{
-    margin: 0.5em 0 0 0;
-    white-space: nowrap;
-    color: rgb(92, 86, 28);
-}
 #header{
     background-color: rgb(46, 45, 45);
     display: flex;
@@ -30,6 +16,9 @@ body{
     flex-direction: column;
     line-height: 25px;
     margin-top: 7px;
+}
+#header a{
+    text-decoration: none;
 }
 #logo_part1{
     color: honeydew;
