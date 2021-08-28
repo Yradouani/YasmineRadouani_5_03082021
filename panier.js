@@ -93,21 +93,6 @@ if(produitLocalStorage === null || produitLocalStorage == ''){
             document.querySelector('#basket_total_quantity').style.display = 'flex';
             document.querySelector('#basket_total_quantity').textContent = `${totalQuantity}`;
     }
-    // var newNodeFullCart = [];
-    // for(produit = 0; produit < produitLocalStorage.length; produit++){
-    //     let fullCartTemplate = document.querySelector('#template_full_card');
-    //     let newNodeFullCart = document.importNode(fullCartTemplate.content, true);
-    //     document.querySelector('#basket_container').appendChild(newNodeFullCart);
-        
-    //     document.querySelector('#name').textContent = `${produitLocalStorage[produit].name}`;
-    //     document.querySelector('#reference').textContent = `Réf : ${produitLocalStorage[produit]._id}`;
-    //     document.querySelector('#price').textContent = `${produitLocalStorage[produit].quantity} x ${produitLocalStorage[produit].price},00€`;
-    //     document.querySelector('#total_price_product').textContent = `${produitLocalStorage[produit].price*produitLocalStorage[produit].quantity},00€`;
-    //     document.querySelector('#number').setAttribute('value', `${produitLocalStorage[produit].quantity}`);
-    //     document.querySelector('#picture_product').setAttribute('src', `${produitLocalStorage[produit].image}`);
-
-
-    //     let totalProduit = produitLocalStorage[produit].quantity*produitLocalStorage[produit].price;
 
 //--------------------------------------------------Formulaire-----------------------------------------------
 //Récupération du template
@@ -129,7 +114,7 @@ document.querySelector('#send_container').addEventListener('click', () => {
 
     //Vérification des données
     const regExFLC = (value) => {
-        return /^[A-Z\-a-z'"-àâäãçéèêëìîïòôöõùûüñ-]{2,20}$/.test(value);
+        return /^[A-Z\-a-z-àâäãçéèêëìîïòôöõùûüñ-]{2,20}$/.test(value);
     }
 
     let firstName = formResponse.firstname;

@@ -1,4 +1,4 @@
-
+//Requête http avec la méthode GET utilisant la fonction fetch
 fetch('http://localhost:3000/api/cameras')
     .then(function(response){
         if(response.ok){
